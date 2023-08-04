@@ -37,3 +37,19 @@ body{
     box-shadow: 1px -3px 6px red;
     z-index: 101;
 }
+
+.main-grid{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 10px;
+
+    padding-top: 6rem;
+}
+.grid-item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-color: rgb(100, 201, 255);
+    height: 12rem;
+}
