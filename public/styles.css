@@ -18,7 +18,22 @@ body{
     right: 0;
     left: 0;
     box-shadow: 1px 3px 6px red;
+    z-index: 101;
 }
 .header-left{
     color: rgb(0, 0, 0);
+}
+
+#footer{
+    background-color: antiquewhite;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position:fixed;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    box-shadow: 1px -3px 6px red;
+    z-index: 101;
 }
