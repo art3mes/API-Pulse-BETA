@@ -9,14 +9,15 @@ function WeatherAPI(){
         const newValue = event.target.value;
         setCityName(newValue);
     }
-
+    let weatherInfo={};
     async function sendData() {
         try {
-          await axios.post("http://localhost:3001/", {
+          const data=await axios.post("http://localhost:3001/", {
             //await axios.post("https://keeper-app-backend-dyr1.onrender.com", {
             cityName:cityName
           });
-          //console.log(res);
+          weatherInfo=data.data
+          console.log(weatherInfo);
         } catch (error){
           console.error(error);
         }
