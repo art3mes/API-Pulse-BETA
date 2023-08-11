@@ -13,7 +13,7 @@ function WeatherAPI(){
     
     async function sendData() {
         try {
-          const response=await axios.post("http://localhost:3001/", {
+          const response=await axios.post("http://localhost:3001/weather", {
             cityName:cityName
           });
           setWeatherInfo(response.data);

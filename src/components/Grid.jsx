@@ -5,7 +5,7 @@ function Grid(){
     return (
         <div className="main-grid">
             <div className="grid-item">
-                {WeatherAPI()}
+                <WeatherAPI />
             </div>
             <div className="grid-item">Two</div>
             <div className="grid-item">Three</div>
