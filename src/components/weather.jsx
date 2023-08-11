@@ -17,7 +17,6 @@ function WeatherAPI(){
             cityName:cityName
           });
           setWeatherInfo(response.data);
-          //console.log(weatherInfo);
         } catch (error){
           console.error(error);
         }
@@ -34,7 +33,6 @@ function WeatherAPI(){
                     <p>Temperature: {weatherInfo.temp}</p>
                     <p>Weather: {weatherInfo.desc}</p>
                     <img src={weatherInfo.imageURL} alt={weatherInfo.desc} />
-                    {/* Add more weather properties here */}
                 </div>
             )}
         </div>
