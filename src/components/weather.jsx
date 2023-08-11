@@ -4,7 +4,7 @@ import axios from 'axios';
 function WeatherAPI(){
 
     const [cityName, setCityName] = useState("");
-    let weatherInfo={1:'aw'};
+    const [weatherInfo, setWeatherInfo] = useState(null);
 
     function handleChange(event) {
         const newValue = event.target.value;
@@ -13,17 +13,14 @@ function WeatherAPI(){
     
     async function sendData() {
         try {
-          const data=await axios.post("http://localhost:3001/", {
+          const response=await axios.post("http://localhost:3001/", {
             cityName:cityName
           });
-          weatherInfo=data.data
-          console.log(weatherInfo);
+          setWeatherInfo(response.data);
+          //console.log(weatherInfo);
         } catch (error){
           console.error(error);
         }
-    }
-    function show(){
-        return weatherInfo.temp;
     }
     return (
         <div className="form">
@@ -32,7 +29,14 @@ function WeatherAPI(){
             <button onClick={sendData}>
                 <span>submit</span>
             </button>
-            <p>{show()}</p>
+            {weatherInfo && ( // Conditionally render weather information
+                <div>
+                    <p>Temperature: {weatherInfo.temp}</p>
+                    <p>Weather: {weatherInfo.desc}</p>
+                    <img src={weatherInfo.imageURL} alt={weatherInfo.desc} />
+                    {/* Add more weather properties here */}
+                </div>
+            )}
         </div>
     );
 }
