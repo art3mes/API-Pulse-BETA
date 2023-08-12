@@ -5,6 +5,7 @@ function AnimeQuote(){
 
     const [title, setTitle] = useState("");
     const [animeData, setAnimeData] = useState("");
+    const [errorInfo, setError] = useState("");
 
 
     function handleChange(event) {
@@ -21,28 +22,25 @@ function AnimeQuote(){
           console.log(response.data);
           setAnimeData(response.data);
         } catch (error){
-          console.error(error);
-
+            setError("No results found.");
+            console.error(error);
         }
     }
-
+    console.log(errorInfo);
     return (
         <div className="">
             <input type="text" onChange={handleChange}  />
             <button onClick={sendData}>
                 <span>submit</span>
             </button>
-        <div>
-               
-            </div>
-            {animeData && ( 
+            
+            {animeData && errorInfo.length === 0 ? ( 
                 <div>
                     <p>anime: {animeData.anime} </p>
                     <p>character: {animeData.character}</p>
                     <p>quote: {animeData.quote}</p>
                 </div>
-            )}
-            
+            ): (<p>No record found.</p>)}
         </div>
     );
 }
