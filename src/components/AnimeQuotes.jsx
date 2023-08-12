@@ -28,7 +28,7 @@ function AnimeQuote(){
 
     return (
         <div className="">
-            <input type="text" onChange={handleChange} value={title} />
+            <input type="text" onChange={handleChange}  />
             <button onClick={sendData}>
                 <span>submit</span>
             </button>
