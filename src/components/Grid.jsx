@@ -1,6 +1,6 @@
 import React from "react";
 import WeatherAPI from "./weather";
-import Agify from "./agify";
+import AnimeQuote from "./AnimeQuotes";
 
 function Grid(){
     return (
@@ -9,7 +9,7 @@ function Grid(){
                 <WeatherAPI />
             </div>
             <div className="grid-item">
-                <Agify />
+                <AnimeQuote />
             </div>
             <div className="grid-item">Three</div>
             <div className="grid-item">Four</div>
