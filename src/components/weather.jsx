@@ -30,7 +30,7 @@ function WeatherAPI(){
             </button>
             {weatherInfo && ( // Conditionally render weather information
                 <div>
-                    <p>Temperature: {weatherInfo.temp}</p>
+                    <p>Temperature: {weatherInfo.temp} °C</p>
                     <p>Weather: {weatherInfo.desc}</p>
                     <img src={weatherInfo.imageURL} alt={weatherInfo.desc} />
                 </div>
