@@ -1,6 +1,7 @@
 import React from "react";
 import WeatherAPI from "./weather";
 import AnimeQuote from "./AnimeQuotes";
+import QRCodeGenerator from "./QRCodeGenerator"
 
 function Grid(){
     return (
@@ -11,7 +12,9 @@ function Grid(){
             <div className="grid-item">
                 <AnimeQuote />
             </div>
-            <div className="grid-item">Three</div>
+            <div className="grid-item">
+                <QRCodeGenerator />
+            </div>
             <div className="grid-item">Four</div>
             <div className="grid-item">Five</div>
         </div>
