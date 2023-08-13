@@ -5,8 +5,9 @@ function AnimeQuote(){
 
     const [title, setTitle] = useState("");
     const [animeData, setAnimeData] = useState("");
-    const [errorInfo, setError] = useState("");
-
+    //const [errorInfo, setError] = useState("");
+    let err = "";
+    
 
     function handleChange(event) {
         const newValue = event.target.value;
@@ -19,14 +20,16 @@ function AnimeQuote(){
             title : title
           });
           //setQuote(response.data);
+          //err = response.data.error;
           console.log(response.data);
           setAnimeData(response.data);
+          setTitle(response.data.anime);
         } catch (error){
-            setError("No results found.");
-            console.error(error);
+            err = error   //error of axiom, not of the api
+            console.error(err);
         }
     }
-    console.log(errorInfo);
+
     return (
         <div className="">
             <input type="text" onChange={handleChange}  />
@@ -34,13 +37,14 @@ function AnimeQuote(){
                 <span>submit</span>
             </button>
             
-            {animeData && errorInfo.length === 0 ? ( 
+            {animeData && title.length !==0 && err.length === 0 ?( 
                 <div>
+             
                     <p>anime: {animeData.anime} </p>
                     <p>character: {animeData.character}</p>
                     <p>quote: {animeData.quote}</p>
                 </div>
-            ): (<p>No record found.</p>)}
+            ): <p>{err}</p>}
         </div>
     );
 }
