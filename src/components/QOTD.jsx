@@ -3,8 +3,8 @@ import axios from "axios";
 
 
 function QOTD(){
-    const [body,setBody]= useState("");
-    const [category, setCategory]= useState("")
+    const [quotes, setQuotes] = useState({});
+    const [category, setCategory]= useState("");
 
     function handleChange(event) {
         const newValue = event.target.value;
@@ -16,7 +16,8 @@ function QOTD(){
           const response=await axios.post("http://localhost:3001/qotd", {
             category:category
           });
-          setBody(response.data);
+          setQuotes(response.data[0]);
+          //console.log(quotes);
         } catch (error){
           console.error(error);
         }
@@ -28,7 +29,12 @@ function QOTD(){
             <button onClick={sendData}>
                 <span>submit</span>
             </button>
-            {body}
+            {quotes &&( 
+                <div>
+                    <p>quote: {quotes.quote} </p>
+                    <p>author: {quotes.author}</p>
+                </div>
+            )}
         </div>
     );
 }
