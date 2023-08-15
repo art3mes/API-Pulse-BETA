@@ -6,7 +6,6 @@ function QOTD(){
     const [quotes, setQuotes] = useState({});
     const [category, setCategory] = useState(""); // Use state to store selected category
 
-
     
     async function sendData() {
         try {
@@ -25,8 +24,8 @@ function QOTD(){
     }
     return (
         <div className="">
-            <label >Select category:</label>
-            <select id="quote" name="category" onChange={handleCategoryChange}>
+            <p >Select category:</p>
+            <select id="quote" name="category" >
                 <option value="age">Age</option>
                 <option value="alone">Alone</option>
                 <option value="amazing">Amazing</option>
@@ -96,9 +95,9 @@ function QOTD(){
                 <option value="success">Success</option>
             </select>
             <button onClick={sendData}>
-                <span>Submit</span>
+                <span onClick={handleCategoryChange}>Submit</span>
             </button>
-            {quotes && quotes!=="" ?( 
+            {quotes && category!=="" ?( 
                 <div>
                     <p>quote: {quotes.quote} </p>
                     <p>author: {quotes.author}</p>
