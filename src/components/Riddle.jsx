@@ -14,6 +14,7 @@ function QRCodeGenerator(){
           setTitle(response.data[0].title);
           setQuestion(response.data[0].question);
           setAnswer(response.data[0].answer);
+          setShowAnswer(false);
         } catch (error){
           console.error(error);
         }

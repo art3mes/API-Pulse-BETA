@@ -32,9 +32,9 @@ function AnimeQuote(){
 
     return (
         <div className="">
-            <input type="text" onChange={handleChange}  />
+            <input type="text" placeholder='Enter name of the Anime' onChange={handleChange}  />
             <button onClick={sendData}>
-                <span>submit</span>
+                <span>Search</span>
             </button>
             
             {animeData && title.length !==0 && err.length === 0 ?( 

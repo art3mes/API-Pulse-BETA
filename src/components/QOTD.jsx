@@ -98,7 +98,7 @@ function QOTD(){
                 <option value="success">Success</option>
             </select> */}
             <button onClick={sendData}>
-                <span >Refresh</span>
+                <span >Quote</span>
             </button>
             {quotes && category!=="" ?( 
                 <div>

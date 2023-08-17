@@ -22,8 +22,7 @@ function QRCodeGenerator(){
     }
     return (
         <div className="">
-            <p>Enter URL:</p>
-            <input type="text" onChange={handleChange} value={URL} />
+            <input type="text" placeholder="Enter URL" onChange={handleChange} value={URL} />
             <button onClick={sendData}>
                 <span>submit</span>
             </button>
