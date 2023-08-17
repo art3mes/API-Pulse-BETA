@@ -5,7 +5,7 @@ function QRCodeGenerator(){
     const [title, setTitle] = useState("");
     const [question, setQuestion] = useState("");
     const [answer, setAnswer] = useState("");
-   
+    const [showAnswer, setShowAnswer] = useState(false);
     async function sendData() {
         try {
           const response=await axios.post("http://localhost:3001/riddle", {
@@ -18,6 +18,9 @@ function QRCodeGenerator(){
           console.error(error);
         }
     }
+    const handleButtonClick = () => {
+        setShowAnswer(!showAnswer);
+    };
     return (
         <div className="">
             <button onClick={sendData}>
@@ -27,7 +30,8 @@ function QRCodeGenerator(){
                 <div>
                     <p>title: {title} </p>
                     <p>question: {question}</p>
-                    <p>{answer}</p>
+                    {showAnswer && <p>{answer}</p>}
+                    <button onClick={handleButtonClick}>Show answer</button>
                 </div>
             ): <p></p>}
         </div>
