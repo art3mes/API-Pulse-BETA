@@ -12,20 +12,23 @@ function QOTD(){
           const response=await axios.post("http://localhost:3001/qotd", {
             category:category
           });
+          setCategory("yes");
           setQuotes(response.data[0]);
           //console.log(quotes);
         } catch (error){
           console.error(error);
         }
     }
+    
       // Handle category selection change
-    function handleCategoryChange(event) {
-        setCategory(event.target.value);
-    }
+    // function handleCategoryChange(event) {
+    //     console.log(event.target.value);
+    //     setCategory(event.target.value);
+    // }
     return (
         <div className="">
-            <p >Select category:</p>
-            <select id="quote" name="category" >
+            {/* <p >Select category:</p> */}
+            {/* <select id="quote" name="category" onChange={handleCategoryChange} >
                 <option value="age">Age</option>
                 <option value="alone">Alone</option>
                 <option value="amazing">Amazing</option>
@@ -93,9 +96,9 @@ function QOTD(){
                 <option value="morning">Morning</option>
                 <option value="movies">Movies</option>
                 <option value="success">Success</option>
-            </select>
+            </select> */}
             <button onClick={sendData}>
-                <span onClick={handleCategoryChange}>Submit</span>
+                <span >Refresh</span>
             </button>
             {quotes && category!=="" ?( 
                 <div>
