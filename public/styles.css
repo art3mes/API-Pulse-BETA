@@ -2,14 +2,15 @@
     margin: 0;
     padding: 0;
 }
-
+input:focus{
+    outline: none;
+}
 /* font-family: 'Montserrat', sans-serif;
 font-family: 'Raleway', sans-serif;
 font-family: 'Roboto', sans-serif; */
 body {
     background-color: rgba(124, 153, 255, 0.253);
 }
-
 
 #header{
     background-color:bisque;
@@ -150,7 +151,31 @@ body {
     font-family: 'Raleway', sans-serif;
     font-weight: 400;
     height: 25px;
-    width: fit-content;
+    
     padding-left: 8px;
-    font-size: 1rem;
+    font-size: 14px;
+    border: none;
+     box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.3);
+}
+.animeQuotes input{
+    width: 230px;
+}
+.animeQuotes , .qotd , .qr , .riddle , .weather {
+    display: flex;
+    align-items: center;
+}
+.animeQuotes button, .qotd button, .qr button, .riddle button, .weather button{
+    border: none;
+    padding: 5px 9px;
+    font-family: 'Roboto', sans-serif;
+    transition: box-shadow 0.2s ease ;
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.3);
+}
+.animeQuotes button:active,
+.qotd button:active,
+.qr button:active,
+.riddle button:active,
+.weather button:active {
+    transform: translate(0px, 2px); /* Apply translation on button press */
+    box-shadow: none;
 }
