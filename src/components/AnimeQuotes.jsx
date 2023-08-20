@@ -31,8 +31,8 @@ function AnimeQuote(){
     }
 
     return (
-        <div className="">
-            <input type="text" placeholder='Enter name of the Anime' onChange={handleChange}  />
+        <div className="animeQuotes">
+            <input className='searchBar' type="text" placeholder='Enter name of the Anime' onChange={handleChange}  />
             <button onClick={sendData}>
                 <span>Search</span>
             </button>

@@ -23,7 +23,7 @@ function QRCodeGenerator(){
         setShowAnswer(!showAnswer);
     };
     return (
-        <div className="">
+        <div className="riddle">
             <button onClick={sendData}>
                 <span >Refresh</span>
             </button>

@@ -22,8 +22,8 @@ function WeatherAPI(){
         }
     }
     return (
-        <div className="">
-            <input type="text" placeholder='Enter City' onChange={handleChange} value={cityName} />
+        <div className="weather">
+            <input className='searchBar' type="text" placeholder='Enter City' onChange={handleChange} value={cityName} />
             <button onClick={sendData}>
                 <span>submit</span>
             </button>
