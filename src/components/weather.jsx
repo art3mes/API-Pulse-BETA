@@ -23,15 +23,17 @@ function WeatherAPI(){
     }
     return (
         <div className="weather">
-            <input className='searchBar' type="text" placeholder='Enter City' onChange={handleChange} value={cityName} />
-            <button onClick={sendData}>
-                <span>submit</span>
-            </button>
+            <div className='weatherSearch'>
+                <input className='searchBar' type="text" placeholder='Enter City' onChange={handleChange} value={cityName} />
+                <button onClick={sendData}>
+                    <span>submit</span>
+                </button>
+            </div>
             {weatherInfo && ( // Conditionally render weather information
-                <div>
-                    <p>Temperature: {weatherInfo.temp} °C</p>
-                    <p>Weather: {weatherInfo.desc}</p>
-                    <img src={weatherInfo.imageURL} alt={weatherInfo.desc} />
+                <div className='weatherInfo'>
+                    <p className='temp'>{weatherInfo.temp} °C</p>
+                    <p className='desc'>{weatherInfo.desc}</p>
+                    <img className='weatherImage' src={weatherInfo.imageURL} alt={weatherInfo.desc} />
                 </div>
             )}
         </div>
