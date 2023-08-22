@@ -32,17 +32,19 @@ function AnimeQuote(){
 
     return (
         <div className="animeQuotes">
-            <input className='searchBar' type="text" placeholder='Enter name of the Anime' onChange={handleChange}  />
-            <button onClick={sendData}>
-                <span>Search</span>
-            </button>
+            <div className='animeSearch'>
+                <input className='searchBar' type="text" placeholder='Enter name of the Anime' onChange={handleChange}  />
+                <button onClick={sendData}>
+                    <span>Search</span>
+                </button>
+            </div>
             
             {animeData && title.length !==0 && err.length === 0 ?( 
                 <div>
              
-                    <p>anime: {animeData.anime} </p>
-                    <p>character: {animeData.character}</p>
-                    <p>quote: {animeData.quote}</p>
+                    <p className='animeTitle'>anime: {animeData.anime} </p>
+                    <p className='animeChar'>character: {animeData.character}</p>
+                    <p className='animeQuote'>quote: {animeData.quote}</p>
                 </div>
             ): <p>{err}</p>}
         </div>

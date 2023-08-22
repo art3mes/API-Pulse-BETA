@@ -156,10 +156,9 @@ font-family: 'Roboto', sans-serif; */
     font-size: 14px;
     border: none;
      box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.3);
+     caret-color: blue;
 }
-.animeQuotes input{
-    width: 230px;
-}
+
 .animeQuotes , .qotd , .qr , .riddle , .weather {
     display: flex;
     align-items: center;
@@ -182,6 +181,8 @@ font-family: 'Roboto', sans-serif; */
 
 /*COMPONENTS */
 
+
+/*weather */
 .weather{
     width: 100%;
 }
@@ -220,4 +221,19 @@ font-family: 'Roboto', sans-serif; */
     grid-column: 2; /* Display in the second column */
     height: 1000px;
     width: 1000px;
+}
+
+
+/* anime quotes */
+
+.animeQuotes input{
+    width: 230px;
+}
+.animeSearch{
+    display: flex;
+    position: absolute;
+    top: 1rem;
+    left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, 0);
 }
