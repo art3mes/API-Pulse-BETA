@@ -5,9 +5,7 @@
 input:focus{
     outline: none;
 }
-/* font-family: 'Montserrat', sans-serif;
-font-family: 'Raleway', sans-serif;
-font-family: 'Roboto', sans-serif; */
+
 body {
     background-color: rgba(124, 153, 255, 0.253);
 }
@@ -146,7 +144,9 @@ body {
 }
 
 /* BACKGROUND CSS ^^^^^^^^^^^^^^^^^^*/
-
+/* font-family: 'Montserrat', sans-serif;
+font-family: 'Raleway', sans-serif;
+font-family: 'Roboto', sans-serif; */
 .searchBar{
     font-family: 'Raleway', sans-serif;
     font-weight: 400;
@@ -182,6 +182,9 @@ body {
 
 /*COMPONENTS */
 
+.weather{
+    width: 100%;
+}
 .weatherSearch{
     display: flex;
     position: absolute;
@@ -193,19 +196,28 @@ body {
     width: 100%;
     grid-template-columns: auto auto; /* Two columns of auto width */
     grid-gap: 10px; /* Gap between grid cells */
+    padding-left: 1rem;
+    padding-top: 3rem;
 }
 
 .temp {
     grid-row: 1/span 2; /* Display in the first row */
-    grid-column: 1 / span 2; /* Span across both columns */
+    grid-column: 1 ; /* Span across both columns */
+    font-size: 3rem;
+    font-family: 'Raleway', sans-serif;
+
 }
 
 .desc {
     grid-row: 1; /* Display in the second row */
     grid-column: 2; /* Display in the first column */
+    font-size: 1.5rem;
+    font-family: 'Montserrat', sans-serif;
 }
 
-.weatherImage {
+.weatherImage img {
     grid-row: 2 ; /* Span both rows */
     grid-column: 2; /* Display in the second column */
+    height: 1000px;
+    width: 1000px;
 }
