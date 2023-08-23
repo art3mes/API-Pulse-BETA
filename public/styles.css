@@ -237,3 +237,11 @@ font-family: 'Roboto', sans-serif; */
   /* bring your own prefixes */
   transform: translate(-50%, 0);
 }
+
+/*qr code */
+
+.qrSearch{
+    display: flex;
+    flex-direction: column;
+    
+}
