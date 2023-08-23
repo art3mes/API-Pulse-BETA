@@ -22,12 +22,14 @@ function QRCodeGenerator(){
     }
     return (
         <div className="qr">
-            <input className='searchBar' type="text" placeholder="Enter URL" onChange={handleChange} value={URL} />
-            <button onClick={sendData}>
-                <span>submit</span>
-            </button>
+            <div className="qrSearch">
+                <input className='searchBar' type="text" placeholder="Enter URL" onChange={handleChange} value={URL} />
+                <button onClick={sendData}>
+                    <span>submit</span>
+                </button>
+            </div>
             {qrURL && qrURL !== "error" ?( 
-                <div>
+                <div className="qrImage">
                    <img src={qrURL} alt="QR "></img>
                 </div>
             ): (qrURL==="error" ? <p>Invalid URL</p>: <p></p>)}
