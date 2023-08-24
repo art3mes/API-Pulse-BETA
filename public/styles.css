@@ -240,8 +240,25 @@ font-family: 'Roboto', sans-serif; */
 
 /*qr code */
 
+.qr{
+    display: flex;
+    flex-direction: row;
+    column-gap: 20px;
+    align-self: center;
+    justify-content: center;
+    padding-left: 5%;
+}
 .qrSearch{
     display: flex;
     flex-direction: column;
-    
+    align-items: center;
+    row-gap: 15px;
+   
+}
+.qrSearch input{
+    width: 200px;
+    text-align: center;
+}
+.qrSearch button{
+    width: 80px;
 }
