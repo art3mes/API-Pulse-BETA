@@ -171,7 +171,6 @@ font-family: 'Roboto', sans-serif; */
     box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.3);
 }
 .animeQuotes button:active,
-.qotd button:active,
 .qr button:active,
 .riddle button:active,
 .weather button:active {
@@ -262,3 +261,15 @@ font-family: 'Roboto', sans-serif; */
 .qrSearch button{
     width: 80px;
 }
+
+/* QOTD */
+
+.qotd button{
+    display: flex;
+    position: absolute;
+     top: 1rem;
+    left: 50%;
+    /* bring your own prefixes */
+    transform: translate(-50%, 0);
+}
+

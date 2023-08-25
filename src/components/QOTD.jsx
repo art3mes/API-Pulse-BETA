@@ -31,9 +31,9 @@ function QOTD(){
                 <span >Quote</span>
             </button>
             {quotes && category!=="" ?( 
-                <div>
-                    <p>quote: {quotes.quote} </p>
-                    <p>author: {quotes.author}</p>
+                <div className="qotdBody">
+                    <div>quote: {quotes.quote} </div>
+                    <div >author: {quotes.author}</div>
                 </div>
             ): <p></p>}
         </div>
