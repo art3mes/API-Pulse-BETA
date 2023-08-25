@@ -264,12 +264,26 @@ font-family: 'Roboto', sans-serif; */
 
 /* QOTD */
 
+.qotd{
+    display: flex;
+    padding-left: 1rem;
+    padding-top: 2rem;
+    padding: 2rem 1rem 0 1rem;
+}
+
 .qotd button{
     display: flex;
     position: absolute;
      top: 1rem;
-    left: 50%;
-    /* bring your own prefixes */
-    transform: translate(-50%, 0);
+    left: 45%;
 }
 
+.qotd button:active{
+    transform: translate(2px,2px);
+    box-shadow: none;
+}
+
+.qotd:first-child{
+    font-size: 1.5rem;
+    font-family: 'Dancing Script', cursive;
+}
