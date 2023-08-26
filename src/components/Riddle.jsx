@@ -24,15 +24,15 @@ function QRCodeGenerator(){
     };
     return (
         <div className="riddle">
-            <button onClick={sendData}>
-                <span >Refresh</span>
+            <button className="riddleSubmit" onClick={sendData}>
+                <span >Click for a Question</span>
             </button>
             {title && title!=="" ?( 
                 <div>
                     <p>title: {title} </p>
                     <p>question: {question}</p>
                     {showAnswer && <p>{answer}</p>}
-                    <button onClick={handleButtonClick}>Show answer</button>
+                    <button onClick={handleButtonClick}>Reveal Answer</button>
                 </div>
             ): <p></p>}
         </div>
