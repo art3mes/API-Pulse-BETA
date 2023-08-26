@@ -29,10 +29,10 @@ function QRCodeGenerator(){
             </button>
             {title && title!=="" ?( 
                 <div>
-                    <p>title: {title} </p>
-                    <p>question: {question}</p>
-                    {showAnswer && <p>{answer}</p>}
-                    <button onClick={handleButtonClick}>Reveal Answer</button>
+                    {/* <p>title: {title} </p> */}
+                    <p className="riddleQues">Question: {question}</p>
+                    {showAnswer && <p className="riddleAns">{answer}</p>}
+                    <button className="riddleShow" onClick={handleButtonClick}>Reveal Answer</button>
                 </div>
             ): <p></p>}
         </div>
