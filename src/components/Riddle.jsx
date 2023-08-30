@@ -27,14 +27,14 @@ function QRCodeGenerator(){
             <button className="riddleSubmit" onClick={sendData}>
                 <span >Click for a Question</span>
             </button>
-            {title && title!=="" ?( 
+            {/* {title && title!=="" ?(  */}
                 <div>
                     {/* <p>title: {title} </p> */}
-                    <p className="riddleQues">Question: {question}</p>
-                    {showAnswer && <p className="riddleAns">{answer}</p>}
+                    <p className="riddleQues"><strong>Question: </strong>What do you do when life gives you lemons?</p>
+                    {showAnswer && <p className="riddleAns">Find a boy with a paper cut</p>}
                     <button className="riddleShow" onClick={handleButtonClick}>Reveal Answer</button>
                 </div>
-            ): <p></p>}
+            {/* ): <p></p>} */}
         </div>
     );
 }
