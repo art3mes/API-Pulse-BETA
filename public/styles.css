@@ -293,6 +293,8 @@ font-family: 'Roboto', sans-serif; */
 .riddle{
    padding-left: 1rem;
    position: relative;
+   padding-bottom: 4rem;
+   padding-top: 3rem;
 }
 .riddleSubmit{
     display: flex;
