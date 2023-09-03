@@ -301,7 +301,9 @@ font-family: 'Roboto', sans-serif; */
     left: 1rem;
     
 }
-
+.riddleSubmit p{
+    white-space: nowrap;
+}
 .riddleQues{
     font-size: 1.15rem;
    font-family: 'Montserrat', sans-serif;
