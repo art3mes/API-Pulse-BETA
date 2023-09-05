@@ -50,5 +50,4 @@ import axios from 'axios';
 //         </div>
 //     );
 // }
-
 export default AnimeQuote;
