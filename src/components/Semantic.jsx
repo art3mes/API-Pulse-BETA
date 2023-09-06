@@ -6,6 +6,7 @@ function Semantic(){
     const [text, setText]= useState("");
     const [score, setScore]=useState("");
     const [sentiment, setSentiment]=useState("");
+    const [resText, setResText]=useState("");
 
     function handleChange(event) {
         const newValue = event.target.value;
@@ -16,17 +17,16 @@ function Semantic(){
           const response=await axios.post("http://localhost:3001/semantic", {
             text:text
           });
-          console.log(response.data);
           setScore(response.data.score);
           setSentiment(response.data.sentiment);
-          console.log(sentiment);
+          setResText(response.data.text);
         } catch (error){
             console.error(error);
         }
     }
 
     return (
-        <div className="animeQuotes">
+        <div className="semantic">
             <div className='animeSearch'>
                 <input className='searchBar' type="text" placeholder='Enter text to do Semantic Analysis' onChange={handleChange}  />
                 <button onClick={sendData}>
@@ -38,7 +38,7 @@ function Semantic(){
                 <div>
                     {/* <p>title: {title} </p> */}
                     <p className=""><strong>Score: </strong>{score}</p>
-                    <p className=""><strong>Text: </strong>{text}</p>
+                    <p className=""><strong>Text: </strong>{resText}</p>
                     <p className=""><strong>Sentiment: </strong>{sentiment}</p>
                 </div>
             ): <p></p>}

@@ -159,18 +159,18 @@ font-family: 'Roboto', sans-serif; */
      caret-color: blue;
 }
 
-.animeQuotes , .qotd , .qr , .riddle , .weather {
+.semantic , .qotd , .qr , .riddle , .weather {
     display: flex;
     align-items: center;
 }
-.animeQuotes button, .qotd button, .qr button, .riddle button, .weather button{
+.semantic button, .qotd button, .qr button, .riddle button, .weather button{
     border: none;
     padding: 5px 9px;
     font-family: 'Roboto', sans-serif;
     transition: box-shadow 0.2s ease ;
     box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.3);
 }
-.animeQuotes button:active,
+.semantic button:active,
 .qr button:active,
 .riddle button:active,
 .weather button:active {
@@ -225,7 +225,7 @@ font-family: 'Roboto', sans-serif; */
 
 /* anime quotes */
 
-.animeQuotes input{
+.semantic input{
     width: 230px;
 }
 .animeSearch{
