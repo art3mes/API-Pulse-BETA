@@ -1,9 +1,9 @@
 import React from "react";
 import WeatherAPI from "./weather";
-import AnimeQuote from "./AnimeQuotes";
 import QRCodeGenerator from "./QRCodeGenerator"
 import QOTD from "./QOTD";
 import Riddle from "./Riddle";
+import Semantic from "./Semantic";
 
 function Grid(){
     return (
@@ -12,7 +12,7 @@ function Grid(){
                 <WeatherAPI />
             </div>
             <div className="grid-item">
-                <AnimeQuote />
+                <Semantic />
             </div>
             <div className="grid-item">
                 <QRCodeGenerator />
