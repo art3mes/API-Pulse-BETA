@@ -311,8 +311,8 @@ font-family: 'Roboto', sans-serif; */
 }
 .riddleQues{
     font-size: 1.15rem;
-   font-family: 'Montserrat', sans-serif;
-font-family: 'Raleway', sans-serif;
+  
+    font-family: 'Raleway', sans-serif;
 
 }
 .riddleAns{
@@ -323,4 +323,21 @@ font-family: 'Raleway', sans-serif;
 .riddleShow{
     position: absolute;
     bottom: 1rem;
+}
+
+/******************************************/
+/* semantic */
+
+.semanticBody{
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+    padding: 2rem 2rem 0 2rem;
+    font-size: 18px;
+}
+.semanticBody strong{
+     font-family: 'Montserrat', sans-serif;
+}
+.semanticBody p{
+    font-family: 'Raleway', sans-serif;
 }
