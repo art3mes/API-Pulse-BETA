@@ -30,13 +30,12 @@ function Semantic(){
             <div className='animeSearch'>
                 <input className='searchBar' type="text" placeholder='Enter text to do Semantic Analysis' onChange={handleChange}  />
                 <button onClick={sendData}>
-                    <span>Search</span>
+                    <span>Analyse</span>
                 </button>
             </div>
             <div className="">
             {sentiment && sentiment!=="" ?( 
                 <div>
-                    {/* <p>title: {title} </p> */}
                     <p className=""><strong>Score: </strong>{score}</p>
                     <p className=""><strong>Text: </strong>{resText}</p>
                     <p className=""><strong>Sentiment: </strong>{sentiment}</p>
