@@ -34,13 +34,13 @@ function Semantic(){
                 </button>
             </div>
             <div className="">
-            {/* {sentiment && sentiment!=="" ?(  */}
+            {sentiment && sentiment!=="" ?( 
                 <div className='semanticBody'>
-                    <p className="score"><strong>Score: </strong>-451</p>
-                    <p className="text"><strong>Text: </strong>yes</p>
-                    <p className="sentiment"><strong>Sentiment: </strong>weak positibe</p>
+                    <p className="score"><strong>Score: </strong>{score}</p>
+                    <p className="text"><strong>Text: </strong>{resText}</p>
+                    <p className="sentiment"><strong>Sentiment: </strong>{sentiment}</p>
                 </div>
-            {/* ): <p></p>} */}
+            ): <p></p>}
         </div>
         </div>
     );
