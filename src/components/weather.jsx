@@ -13,7 +13,8 @@ function WeatherAPI(){
     
     async function sendData() {
         try {
-          const response=await axios.post("http://localhost:3001/weather", {
+        //   const response=await axios.post("http://localhost:3001/weather", {
+            const response=await axios.post("https://api-pulse-backend.onrender.com/weather", {
             cityName:cityName
           });
           setWeatherInfo(response.data);

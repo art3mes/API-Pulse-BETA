@@ -12,7 +12,8 @@ function QRCodeGenerator(){
     
     async function sendData() {
         try {
-          const response=await axios.post("http://localhost:3001/qrcodegenerator", {
+        //   const response=await axios.post("http://localhost:3001/qrcodegenerator", {
+        const response=await axios.post("https://api-pulse-backend.onrender.com/qrcodegenerator", {
             URL:URL
           });
           setQRURL(response.data);

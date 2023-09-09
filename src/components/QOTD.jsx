@@ -9,7 +9,8 @@ function QOTD(){
     
     async function sendData() {
         try {
-          const response=await axios.post("http://localhost:3001/qotd", {
+          // const response=await axios.post("http://localhost:3001/qotd", {
+          const response=await axios.post("https://api-pulse-backend.onrender.com/qotd", {
             category:category
           });
           setCategory("yes");

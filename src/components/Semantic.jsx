@@ -14,7 +14,8 @@ function Semantic(){
     }
     async function sendData() {
         try {
-          const response=await axios.post("http://localhost:3001/semantic", {
+        //   const response=await axios.post("http://localhost:3001/semantic", {
+        const response=await axios.post("https://api-pulse-backend.onrender.com/semantic", {
             text:text
           });
           setScore(response.data.score);

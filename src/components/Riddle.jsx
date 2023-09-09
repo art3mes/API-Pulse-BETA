@@ -8,7 +8,8 @@ function QRCodeGenerator(){
     const [showAnswer, setShowAnswer] = useState(false);
     async function sendData() {
         try {
-          const response=await axios.post("http://localhost:3001/riddle", {
+        //   const response=await axios.post("http://localhost:3001/riddle", {
+         const response=await axios.post("https://api-pulse-backend.onrender.com/riddle", {
           });
           console.log(response.data[0]);
           setTitle(response.data[0].title);
