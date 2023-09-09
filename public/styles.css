@@ -48,22 +48,37 @@ body {
     font-family: 'Montserrat', sans-serif;
     font-size: 13px;
 }
-.main-grid{
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: 20px;
-    position: relative;
-    z-index: 100;
-    padding: 6rem 3rem 0 3rem;
+.main-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Default: 3 columns per row for larger screens */
+  gap: 20px;
+  position: relative;
+  z-index: 100;
+  padding: 6rem 3rem 0 3rem;
 }
-.grid-item{
-    display: flex;
-    
-    color: white;
-    background-color: rgb(100, 201, 255);
-    min-height: 12rem;
-    position: relative;
+
+.grid-item {
+  display: flex;
+  color: white;
+  background-color: rgb(100, 201, 255);
+  min-height: 12rem;
+  position: relative;
 }
+
+/* Media query for smaller screens (e.g., screens with a max-width of 768px) */
+@media (max-width:1080px) {
+  .main-grid {
+    grid-template-columns: repeat(2, 1fr); /* Show 2 columns per row on smaller screens */
+  }
+}
+
+/* Media query for even smaller screens (e.g., screens with a max-width of 480px) */
+@media (max-width: 750px) {
+  .main-grid {
+    grid-template-columns: 1fr; /* Show 1 column per row on even smaller screens */
+  }
+}
+
 
 /* BACKGROUND CSS */
 
@@ -340,4 +355,9 @@ font-family: 'Roboto', sans-serif; */
 }
 .semanticBody p{
     font-family: 'Raleway', sans-serif;
+}
+
+
+.error{
+    font-family:'Roboto', sans-serif ;
 }

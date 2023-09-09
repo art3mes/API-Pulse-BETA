@@ -32,7 +32,7 @@ function QRCodeGenerator(){
                 <div className="qrImage">
                    <img src={qrURL} alt="QR "></img>
                 </div>
-            ): (qrURL==="error" ? <p>Invalid URL</p>: <p></p>)}
+            ): (qrURL==="error" ? <p className="error">Invalid URL</p>: <p></p>)}
         </div>
     );
 }
