@@ -31,7 +31,7 @@ function WeatherAPI(){
             </div>
             {weatherInfo && ( // Conditionally render weather information
                 <div className='weatherInfo'>
-                    <p className='temp'>{weatherInfo.temp} °C</p>
+                    <p className='temp'>{weatherInfo.temp}</p>
                     <p className='desc'>{weatherInfo.desc}</p>
                     <img className='weatherImage' src={weatherInfo.imageURL} alt={weatherInfo.desc} />
                 </div>
