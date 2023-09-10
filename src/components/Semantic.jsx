@@ -28,7 +28,7 @@ function Semantic(){
 
     return (
         <div className="semantic">
-            <div className='animeSearch'>
+            <div className='semanticSearch'>
                 <input className='searchBar' type="text" placeholder='Enter text to do Semantic Analysis' onChange={handleChange}  />
                 <button onClick={sendData}>
                     <span>Analyse</span>

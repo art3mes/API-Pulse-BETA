@@ -243,7 +243,7 @@ font-family: 'Roboto', sans-serif; */
 .semantic input{
     width: 230px;
 }
-.animeSearch{
+.semanticSearch{
     display: flex;
     position: absolute;
     top: 1rem;
@@ -267,14 +267,13 @@ font-family: 'Roboto', sans-serif; */
     flex-direction: column;
     align-items: center;
     row-gap: 15px;
-   
 }
 .qrSearch input{
     width: 200px;
     text-align: center;
 }
 .qrSearch button{
-    width: 80px;
+    white-space: nowrap;
 }
 
 /* QOTD */

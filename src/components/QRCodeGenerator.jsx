@@ -26,7 +26,7 @@ function QRCodeGenerator(){
             <div className="qrSearch">
                 <input className='searchBar' type="text" placeholder="Enter URL" onChange={handleChange} value={URL} />
                 <button onClick={sendData}>
-                    <span>submit</span>
+                    <span>Get QR Code</span>
                 </button>
             </div>
             {qrURL && qrURL !== "error" ?( 

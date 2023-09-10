@@ -15,17 +15,10 @@ function QOTD(){
           });
           setCategory("yes");
           setQuotes(response.data[0]);
-          //console.log(quotes);
         } catch (error){
           console.error(error);
         }
     }
-    
-      // Handle category selection change
-    // function handleCategoryChange(event) {
-    //     console.log(event.target.value);
-    //     setCategory(event.target.value);
-    // }
     return (
         <div className="qotd">
             <button onClick={sendData}>

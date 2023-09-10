@@ -27,7 +27,7 @@ function WeatherAPI(){
             <div className='weatherSearch'>
                 <input className='searchBar' type="text" placeholder='Enter City' onChange={handleChange} value={cityName} />
                 <button onClick={sendData}>
-                    <span>submit</span>
+                    <span>Find Weather</span>
                 </button>
             </div>
             {weatherInfo && ( // Conditionally render weather information
