@@ -21,9 +21,11 @@ function QOTD(){
     }
     return (
         <div className="qotd">
-            <button className="searchBar" onClick={sendData}>
+            <div className="qotdSearch">
+                <button onClick={sendData}>
                 <span >Quote</span>
             </button>
+            </div>
             {quotes && category!=="" ?( 
                 <div className="qotdBody">
                     <div>{quotes.quote} </div>

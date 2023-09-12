@@ -199,7 +199,7 @@ font-family: 'Roboto', sans-serif; */
     display: flex;
     align-items: center;
 }
-.semantic button, .qotd button, .qr button, .riddle button, .weather button{
+.semantic button, .qotdSearch button, .qr button, .riddle button, .weather button{
     border: none;
     padding: 5px 9px;
     font-family: 'Roboto', sans-serif;
@@ -286,13 +286,15 @@ font-family: 'Roboto', sans-serif; */
 
 .qotd{
     display: flex;
-    padding: 2rem 1rem 0 1rem;
+    padding: 1rem 1rem 0 1rem;
     width: 100%;
+    flex-direction: column;
 }
 
-.qotd .searchBar:active{
+.qotdSearch button:active{
     transform: translate(2px,2px);
     box-shadow: none;
+    padding-top: 0;
 }
 
 .qotd:first-child{
