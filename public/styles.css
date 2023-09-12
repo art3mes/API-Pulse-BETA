@@ -65,40 +65,6 @@ body {
   position: relative;
 }
 
-/* Media query for smaller screens (e.g., screens with a max-width of 768px) */
-@media (max-width:1080px) {
-  .main-grid {
-    grid-template-columns: repeat(2, 1fr); /* Show 2 columns per row on smaller screens */
-  }
-}
-
-@media (max-width: 750px) {
-  .main-grid {
-    grid-template-columns: 1fr; /* Show 1 column per row on even smaller screens */
-  }
-    #header{
-        height: 3rem;
-    }
-    .header-left{
-        font-size: 2rem;
-        margin-left: 2rem;
-    }
-    #footer{
-    height: 3rem;
-    }
-    .footer-left{
-
-        font-size: 13px;
-    }
-    .semanticSearch,.weatherSearch{
-        position: relative;
-        flex-direction: column;
-        row-gap: 0;
-    }
-    .qotd button{
-        left: 0;
-    }
-}
 
 
 /* BACKGROUND CSS */
@@ -370,4 +336,52 @@ font-family: 'Roboto', sans-serif; */
 
 .error{
     font-family:'Roboto', sans-serif ;
+}
+
+/*Media queries */
+
+/* Media query for smaller screens (e.g., screens with a max-width of 768px) */
+@media (max-width:1080px) {
+  .main-grid {
+    grid-template-columns: repeat(2, 1fr); /* Show 2 columns per row on smaller screens */
+  }
+}
+
+@media (max-width: 750px) {
+  .main-grid {
+    grid-template-columns: 1fr; /* Show 1 column per row on even smaller screens */
+  }
+    #header{
+        height: 3rem;
+    }
+    .header-left{
+        font-size: 2rem;
+        margin-left: 2rem;
+    }
+    #footer{
+    height: 3rem;
+    }
+    .footer-left{
+        font-size: 13px;
+    }
+    .semanticSearch,.weatherSearch,.qrSearch{
+        flex-direction: column;
+        padding: 0;
+        row-gap: 0;
+    }
+    .weatherInfo,.semanticBody{
+        padding-top: 5rem;
+        padding-bottom: 1rem;
+    }
+    .qr{
+        flex-direction: column;
+        row-gap: 20px;
+        align-self: center;
+        justify-content: center;
+        position: relative;
+    }
+    .qrSearch{
+        position: absolute;
+        left: 1rem;
+    }
 }
