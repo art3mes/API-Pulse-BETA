@@ -72,11 +72,32 @@ body {
   }
 }
 
-/* Media query for even smaller screens (e.g., screens with a max-width of 480px) */
 @media (max-width: 750px) {
   .main-grid {
     grid-template-columns: 1fr; /* Show 1 column per row on even smaller screens */
   }
+    #header{
+        height: 3rem;
+    }
+    .header-left{
+        font-size: 2rem;
+        margin-left: 2rem;
+    }
+    #footer{
+    height: 3rem;
+    }
+    .footer-left{
+
+        font-size: 13px;
+    }
+    .semanticSearch,.weatherSearch{
+        position: relative;
+        flex-direction: column;
+        row-gap: 0;
+    }
+    .qotd button{
+        left: 0;
+    }
 }
 
 
@@ -237,21 +258,6 @@ font-family: 'Roboto', sans-serif; */
     width: 1000px;
 }
 
-
-/* anime quotes */
-
-.semantic input{
-    width: 230px;
-}
-.semanticSearch{
-    display: flex;
-    position: absolute;
-    top: 1rem;
-    left: 50%;
-  /* bring your own prefixes */
-  transform: translate(-50%, 0);
-}
-
 /*qr code */
 
 .qr{
@@ -280,19 +286,11 @@ font-family: 'Roboto', sans-serif; */
 
 .qotd{
     display: flex;
-    padding-left: 1rem;
-    padding-top: 2rem;
     padding: 2rem 1rem 0 1rem;
+    width: 100%;
 }
 
-.qotd button{
-    display: flex;
-    position: absolute;
-     top: 1rem;
-    left: 45%;
-}
-
-.qotd button:active{
+.qotd .searchBar:active{
     transform: translate(2px,2px);
     box-shadow: none;
 }
@@ -341,6 +339,17 @@ font-family: 'Roboto', sans-serif; */
 
 /******************************************/
 /* semantic */
+.semantic input{
+    width: 230px;
+}
+.semanticSearch{
+    display: flex;
+    position: absolute;
+    top: 1rem;
+    left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, 0);
+}
 
 .semanticBody{
     display: flex;
